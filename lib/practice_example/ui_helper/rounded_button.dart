@@ -11,7 +11,7 @@ class CustomRoundedButton extends StatelessWidget {
 
   TextStyle? textStyle;
 
-  CustomRoundedButton({required this.btnText, this.icon, this.bgColor,  this.callback, this.textStyle});
+  CustomRoundedButton({super.key, required this.btnText, this.icon, this.bgColor,  this.callback, this.textStyle});
 
   @override
   Widget build(BuildContext context) {
