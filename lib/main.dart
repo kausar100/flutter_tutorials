@@ -9,9 +9,11 @@ import 'package:flutter_practice/practice_example/grid_view.dart';
 import 'package:flutter_practice/practice_example/call_back.dart';
 import 'package:flutter_practice/practice_example/custom_widget.dart';
 import 'package:flutter_practice/practice_example/wrap_widget.dart';
+import 'package:flutter_practice/practice_example/theme_demo.dart';
 
 void main() {
   runApp(MaterialApp(
+        title: 'Flutter Tutorials',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
@@ -25,5 +27,6 @@ void main() {
         '/wrap_widget': (context) => WrapWidgetExample(),
         '/richtext_widget': (context) => RichTextWidget(),
         '/page_transition': (context) => PageTransitionExample(),
+        '/theme_demo': (context) => ThemeDemoExample(),
       }));
 }

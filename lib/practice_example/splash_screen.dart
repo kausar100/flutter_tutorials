@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_practice/practice_example/page_transition.dart';
 import 'package:flutter_practice/practice_example/range_slider.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_practice/practice_example/theme_demo.dart';
 
 class SplashScreenExample extends StatefulWidget {
   const SplashScreenExample({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _SplashScreenExampleState extends State<SplashScreenExample> {
 
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => RangeSliderWidget()));
+          context, MaterialPageRoute(builder: (_) => ThemeDemoExample()));
     });
   }
 
