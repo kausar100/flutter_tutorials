@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/practice_example/curved_navigation_bar.dart';
 import 'package:flutter_practice/practice_example/custom_button.dart';
 import 'package:flutter_practice/practice_example/date_time.dart';
 import 'package:flutter_practice/practice_example/page_transition.dart';
@@ -28,5 +29,6 @@ void main() {
         '/richtext_widget': (context) => RichTextWidget(),
         '/page_transition': (context) => PageTransitionExample(),
         '/theme_demo': (context) => ThemeDemoExample(),
+        '/curve_navigation': (context) => CurvedNavigationExample(),
       }));
 }

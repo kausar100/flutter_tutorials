@@ -2,8 +2,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_practice/practice_example/curved_navigation_bar.dart';
+import 'package:flutter_practice/practice_example/custom_dialog.dart';
+import 'package:flutter_practice/practice_example/data_table.dart';
+import 'package:flutter_practice/practice_example/http_json.dart';
+import 'package:flutter_practice/practice_example/navigation_rail.dart';
 import 'package:flutter_practice/practice_example/page_transition.dart';
 import 'package:flutter_practice/practice_example/range_slider.dart';
+import 'package:flutter_practice/practice_example/shared_preferences.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_practice/practice_example/theme_demo.dart';
 
@@ -24,7 +30,7 @@ class _SplashScreenExampleState extends State<SplashScreenExample> {
 
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => ThemeDemoExample()));
+          context, MaterialPageRoute(builder: (_) => SharedPreferencesPlugin()));
     });
   }
 
