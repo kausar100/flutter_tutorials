@@ -41,6 +41,8 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   http: ^0.13.5
   shared_preferences: ^2.0.15
+  connectivity_plus: ^3.0.2
+  fluttertoast: ^8.1.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +71,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/files/users.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

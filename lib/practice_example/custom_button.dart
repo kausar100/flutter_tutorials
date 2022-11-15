@@ -21,7 +21,7 @@ class _RoundedButtonWidgetState extends State<RoundedButtonWidget> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 200,
               height: 50,
               child: CustomRoundedButton(
@@ -32,8 +32,8 @@ class _RoundedButtonWidgetState extends State<RoundedButtonWidget> {
                 textStyle: MytextStyle(),
               ),
             ),
-            SizedBox(height: 20),
-            Container(
+            const SizedBox(height: 20),
+            SizedBox(
               width: 200,
               height: 50,
               child: CustomRoundedButton(
@@ -45,7 +45,6 @@ class _RoundedButtonWidgetState extends State<RoundedButtonWidget> {
                 textStyle: MytextStyle(),
               ),
             ),
-            
           ],
         ),
       ),
