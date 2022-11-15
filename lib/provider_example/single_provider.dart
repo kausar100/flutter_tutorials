@@ -1,3 +1,4 @@
+import 'package:flutter_practice/provider_example/multi_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -32,9 +33,20 @@ class Helper extends StatelessWidget {
     final providerData = Provider.of<CustomCounter>(context);
     return Scaffold(
       body: Center(
-          child: Text(
-        providerData.value.toString(),
-        textScaleFactor: 3.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            providerData.value.toString(),
+            textScaleFactor: 3.0,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => CartProvider()));
+              },
+              child: Text('next page')),
+        ],
       )),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
