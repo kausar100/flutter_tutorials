@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/api_pages/main_page.dart';
 import 'package:flutter_practice/practice_example/http_json.dart';
+import 'package:flutter_practice/provider_example/single_provider.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 
@@ -22,7 +23,7 @@ class _SplashScreenExampleState extends State<SplashScreenExample> {
 
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => ApiExample()));
+          context, MaterialPageRoute(builder: (_) => ProviderMainPage()));
     });
   }
 
