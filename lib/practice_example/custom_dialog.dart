@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_final_fields, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/practice_example/ui_helper/text_style.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class DialogExample extends StatefulWidget {
   const DialogExample({super.key});
@@ -21,6 +19,7 @@ class _DialogExampleState extends State<DialogExample> {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             ElevatedButton(
               onPressed: () {
@@ -48,6 +47,7 @@ class _DialogExampleState extends State<DialogExample> {
         context: context,
         builder: ((context) => AlertDialog(
               title: Text("Alert Dialog"),
+              contentPadding: EdgeInsets.all(20.0),
               content: Text('Are you sure you want to cancel this!'),
               actions: [
                 TextButton(

@@ -14,6 +14,7 @@ import 'package:flutter_practice/practice_example/call_back.dart';
 import 'package:flutter_practice/practice_example/custom_widget.dart';
 import 'package:flutter_practice/practice_example/wrap_widget.dart';
 import 'package:flutter_practice/practice_example/theme_demo.dart';
+import 'package:flutter_practice/top_widgets/main.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -21,7 +22,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => MyAutocompleteExampleApp(),
+        '/': (context) => TopWidgetMain(),
         '/user_input': (context) => TextFieldExample(),
         '/date_time': (context) => DateTimeExample(),
         '/grid_view': (context) => GridViewExample(),

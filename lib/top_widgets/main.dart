@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/practice_example/custom_dialog.dart';
 import 'package:flutter_practice/top_widgets/adaptive_widget.dart';
 import 'package:flutter_practice/top_widgets/animated_cross_fade.dart';
 import 'package:flutter_practice/top_widgets/bottom_navbar.dart';
 import 'package:flutter_practice/top_widgets/bottom_sheet.dart';
+import 'package:flutter_practice/top_widgets/checkbox_listTile.dart';
 import 'package:flutter_practice/top_widgets/choice_chip.dart';
 import 'package:flutter_practice/top_widgets/date_picker.dart';
 import 'package:flutter_practice/top_widgets/disable_backbutton.dart';
@@ -12,12 +14,16 @@ import 'package:flutter_practice/top_widgets/expansion_tilelist.dart';
 import 'package:flutter_practice/top_widgets/fittedbox_widget.dart';
 import 'package:flutter_practice/top_widgets/flexible_widget.dart';
 import 'package:flutter_practice/top_widgets/future_builder.dart';
-import 'package:flutter_practice/top_widgets/gridpaper.dart';
+import 'package:flutter_practice/top_widgets/drawer_widget.dart';
+import 'package:flutter_practice/top_widgets/gesture_detector.dart';
 import 'package:flutter_practice/top_widgets/hero_widget.dart';
+import 'package:flutter_practice/top_widgets/inkwell_widget.dart';
+import 'package:flutter_practice/top_widgets/interactive_viewer.dart';
 import 'package:flutter_practice/top_widgets/option_menu.dart';
 import 'package:flutter_practice/top_widgets/page_view.dart';
 import 'package:flutter_practice/top_widgets/range_slider.dart';
 import 'package:flutter_practice/top_widgets/search_bar.dart';
+import 'package:flutter_practice/top_widgets/selectable_text.dart';
 import 'package:flutter_practice/top_widgets/sliverapp_bar.dart';
 import 'package:flutter_practice/top_widgets/stepper_widget.dart';
 import 'package:flutter_practice/top_widgets/stream_builder.dart';
@@ -232,8 +238,58 @@ class TopWidgetMain extends StatelessWidget {
                   style:
                       ElevatedButton.styleFrom(shape: const StadiumBorder()),
                   onPressed: (() => Navigator.of(context).push(
-                      CupertinoPageRoute(builder: (_) => MyGridPaper()))),
-                  child: const Text('Gridpaper')),
+                      CupertinoPageRoute(builder: (_) => MyDrawer()))),
+                  child: const Text('Drawer')),
+            ],
+          ),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [ 
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) => const DialogExample()))),
+                  child: const Text('Alert Dialog')),
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) => const MyGestureDetector()))),
+                  child: const Text('Gesture Detector')),
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(builder: (_) => MyInkWell()))),
+                  child: const Text('InkWell')),
+            ],
+          ),
+            Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [ 
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) => const MyInteractiveViewer()))),
+                  child: const Text('InteractiveViewer')),
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) => const MyCheckBoxListTile()))),
+                  child: const Text('CheckBoxListTile')),
+              ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(builder: (_) => MySelectableText()))),
+                  child: const Text('SelectableText')),
             ],
           ),
         ],
