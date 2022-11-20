@@ -38,13 +38,13 @@ class TopWidgetMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Top 35 widgets!"),
+        title: const Text("Top widgets!"),
         centerTitle: true,
       ),
       body: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
                   style:
