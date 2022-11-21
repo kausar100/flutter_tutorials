@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/model/user.dart';
+import 'package:flutter_practice/api_pages/model/user.dart';
 
 class UserPage extends StatelessWidget {
   final UserInfo user;

@@ -1,7 +1,7 @@
 import 'dart:convert' as convert;
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_practice/model/user.dart';
+import 'package:flutter_practice/api_pages/model/user.dart';
 import 'package:http/http.dart' as http;
 
 class UsersApi {

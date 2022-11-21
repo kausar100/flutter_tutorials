@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/api_pages/call_users_api.dart';
 import 'package:flutter_practice/api_pages/single_user.dart';
-import 'package:flutter_practice/model/user.dart';
+import 'package:flutter_practice/api_pages/model/user.dart';
 
 class UserLocalPage extends StatelessWidget {
   const UserLocalPage({super.key});
