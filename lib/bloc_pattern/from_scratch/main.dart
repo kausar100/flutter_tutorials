@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_practice/bloc_pattern/counter_bloc.dart';
-import 'package:flutter_practice/bloc_pattern/counter_event.dart';
+import 'package:flutter_practice/bloc_pattern/from_scratch/counter_bloc.dart';
+import 'package:flutter_practice/bloc_pattern/from_scratch/counter_event.dart';
 
 class MyBlocExample extends StatelessWidget {
   const MyBlocExample({super.key});

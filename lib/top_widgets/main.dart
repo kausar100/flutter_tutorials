@@ -17,6 +17,7 @@ import 'package:flutter_practice/top_widgets/future_builder.dart';
 import 'package:flutter_practice/top_widgets/drawer_widget.dart';
 import 'package:flutter_practice/top_widgets/gesture_detector.dart';
 import 'package:flutter_practice/top_widgets/hero_widget.dart';
+import 'package:flutter_practice/top_widgets/indexed_stack.dart';
 import 'package:flutter_practice/top_widgets/inkwell_widget.dart';
 import 'package:flutter_practice/top_widgets/interactive_viewer.dart';
 import 'package:flutter_practice/top_widgets/option_menu.dart';
@@ -290,6 +291,31 @@ class TopWidgetMain extends StatelessWidget {
                   onPressed: (() => Navigator.of(context).push(
                       CupertinoPageRoute(builder: (_) => MySelectableText()))),
                   child: const Text('SelectableText')),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(
+                  style:
+                  ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) =>  CustomNavigationBarDemo()))),
+                  child: const Text('Index Stack')),
+              ElevatedButton(
+                  style:
+                  ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(
+                          builder: (_) => const MyCheckBoxListTile()))),
+                  child: const Text('MenuWidget')),
+              ElevatedButton(
+                  style:
+                  ElevatedButton.styleFrom(shape: const StadiumBorder()),
+                  onPressed: (() => Navigator.of(context).push(
+                      CupertinoPageRoute(builder: (_) => MySelectableText()))),
+                  child: const Text('')),
             ],
           ),
         ],

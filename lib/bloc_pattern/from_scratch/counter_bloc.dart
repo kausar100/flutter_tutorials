@@ -1,9 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter_practice/bloc_pattern/counter_event.dart';
+import 'package:flutter_practice/bloc_pattern/from_scratch/counter_event.dart';
 
 class CounterBloc {
   int _counter = 0;
+  
   CounterBloc() {
     //input event
     _counterEventController.stream.listen(_mapEventToState);

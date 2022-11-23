@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/api_pages/main_page.dart';
-import 'package:flutter_practice/bloc_pattern/main.dart';
+import 'package:flutter_practice/bloc_pattern/from_scratch/main.dart';
 import 'package:flutter_practice/practice_example/autocomplete_using_package.dart';
 import 'package:flutter_practice/practice_example/curved_navigation_bar.dart';
 import 'package:flutter_practice/practice_example/autocomplete_user.dart';
@@ -16,6 +16,11 @@ import 'package:flutter_practice/practice_example/call_back.dart';
 import 'package:flutter_practice/practice_example/custom_widget.dart';
 import 'package:flutter_practice/practice_example/wrap_widget.dart';
 import 'package:flutter_practice/practice_example/theme_demo.dart';
+import 'package:flutter_practice/responsive_design/aspect_ratio.dart';
+import 'package:flutter_practice/responsive_design/expanded_flexible.dart';
+import 'package:flutter_practice/responsive_design/fractional_sizedbox.dart';
+import 'package:flutter_practice/responsive_design/layout_builder.dart';
+import 'package:flutter_practice/responsive_design/media_query.dart';
 import 'package:flutter_practice/top_widgets/main.dart';
 
 void main() {
@@ -24,7 +29,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => MyBlocExample(),
+        '/': (context) => TopWidgetMain(),
         '/user_input': (context) => TextFieldExample(),
         '/date_time': (context) => DateTimeExample(),
         '/grid_view': (context) => GridViewExample(),
