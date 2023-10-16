@@ -47,6 +47,9 @@ dependencies:
   flutter_typeahead: ^4.1.1
   faker: ^2.0.0
   equatable: ^2.0.5
+  record: ^4.4.4
+  path_provider: ^2.0.14
+  flutter_slidable: ^3.0.0
 
 dev_dependencies:
   flutter_test:

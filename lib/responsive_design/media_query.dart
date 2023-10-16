@@ -15,6 +15,7 @@ class MyMediaQuery extends StatelessWidget {
           child: Text(
             'View\n\n' +
                 '[MediaQuery width]: ${screenSize.width.toStringAsFixed(2)}\n\n' +
+                '[MediaQuery height]: ${screenSize.height.toStringAsFixed(2)}\n\n' +
                 '[MediaQuery orientation]: $orientation',
             style: TextStyle(color: Colors.white, fontSize: 18),
           ),

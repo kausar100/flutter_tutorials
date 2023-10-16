@@ -13,10 +13,23 @@ class MyLayoutBuilder extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ElevatedButton(
-              onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (_) => SecondPage())),
-              child: Text('next')),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => SecondPage())),
+                  child: const Text('next')),
+              SizedBox(
+                width: 20.0,
+              ),
+              ElevatedButton(
+                  onPressed: () => Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (_) => ThirdPage())),
+                  child: const Text('another')),
+            ],
+          ),
           LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
               if (constraints.maxWidth > 600) {
@@ -73,7 +86,6 @@ class SecondPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-
             Expanded(
               flex: 20,
               child: Row(
@@ -123,6 +135,82 @@ class SecondPage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Size sh = MediaQuery.of(context).size;
+    double width = sh.width;
+    double height = sh.height;
+    double aspect_ratio = width / height;
+
+    print('width ' + sh.width.toString());
+    print('height ' + sh.width.toString());
+    print('aspect ratio ' + aspect_ratio.toString());
+    return Scaffold(
+      body: LayoutBuilder(builder: (context, constraints) {
+        print('maxHeight ' + constraints.maxHeight.toString());
+        print('maxWidth ' + constraints.maxWidth.toString());
+        print('minHeight ' + constraints.minHeight.toString());
+        print('minWidth ' + constraints.minWidth.toString());
+
+        if (constraints.maxHeight >= 820) {
+          return Column(children: [
+            Container(
+              color: Colors.red,
+              width: width,
+              height: height / 4,
+            ),
+            Container(
+              color: Colors.green,
+              width: width,
+              height: height / 4,
+            ),
+            Container(
+              color: Colors.blue,
+              width: width,
+              height: height / 4,
+            ),
+              Container(
+              color: Colors.orange,
+              width: width,
+              height: height / 4,
+            ),
+          ]);
+        } else {
+          return Column(children: [
+            Container(
+              color: Colors.red,
+              width: width,
+              height: height / 4,
+            ),
+           Row(
+            children: [
+               Container(
+              color: Colors.green,
+              width: width / 2,
+              height: height / 4,
+            ),
+            Container(
+              color: Colors.blue,
+              width: width / 2,
+              height: height / 4,
+            ),
+            ],
+           ),
+            Container(
+              color: Colors.orange,
+              width: width,
+              height: height / 4,
+            ),
+          ]);
+        }
+      }),
     );
   }
 }
